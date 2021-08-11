@@ -1,0 +1,52 @@
+<div class="wrapper">
+    <div class="page-header clear-filter" filter-color="orange">
+      <div class="page-header-image rellax-header" data-rellax-speed="-7" style="background-image: url('assets/img/header.jpg');">
+  
+      </div>
+
+        <div class="container">
+        <h4 style="text-align: center;padding-top: 30px;margin-top: 0px;">PEDESTRIAN DETECTION USING DATASET</h4>
+
+            <div class="content-center brand">
+              <div class="row">
+                  <div class="col-md-6" style="border-right: 2px solid #f8f9fa;">
+                    <div class="video">
+                        <video width="320" height="240"   autoplay loop muted>
+                            <source src="../../../assets/video.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                          <label class="btn btn-primary">
+                              Choose Video 
+                              <input type="file" (change)="ChooseVideo($event,modal_mini)" hidden>
+                          </label>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="video">
+                        <video width="320" height="240"   autoplay loop muted>
+                            <source src="../../../assets/webcam.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <button type="button" class="btn btn-primary" (click)="ChooseWebCam(modal_mini)">
+                        Choose Webcam 
+                    </button>
+                  </div>
+                </div>
+            </div>
+  
+        </div>
+    </div>
+    <ng-template #modal_mini let-c="close" let-d="dismiss">
+        <div class="modal-header justify-content-center">
+            <div class="modal-profile">
+                <i class="now-ui-icons emoticons_satisfied"></i>
+            </div>
+        </div>
+        <div class="modal-body">
+            <p>Resulted Video Will be Played on Python Terminal</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-link btn-neutral">Back</button>
+            <button type="button" class="btn btn-link btn-neutral" (click)="c('Close click')">Ok</button>
+        </div>
+    </ng-template>
+</div>
