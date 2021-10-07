@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
-
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -23,7 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
         AppRoutingModule,
         ComponentsModule,
         ExamplesModule,
-        HttpClientModule
+        HttpClientModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

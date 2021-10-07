@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as Rellax from 'rellax';
 import { DbService } from '../../dbservice.service';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
@@ -12,7 +13,7 @@ export class LandingComponent implements OnInit {
   focus;
   focus1;
   closeResult: string;
-  constructor(private dbService : DbService, private modalService: NgbModal) { }
+  constructor(private dbService : DbService, private modalService: NgbModal, private router: Router) { }
 
   ChooseVideo (fileInput: any,modal){
     console.log(fileInput.target.value,'fi')
@@ -47,6 +48,8 @@ export class LandingComponent implements OnInit {
     }
 
   }
+
+  
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
         return 'by pressing ESC';

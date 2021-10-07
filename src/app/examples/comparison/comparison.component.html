@@ -1,0 +1,73 @@
+<div class="wrapper">
+    <div class="page-header clear-filter" filter-color="orange">
+        <div class="page-header-image rellax-header" data-rellax-speed="-7"
+            style="background-image: url('assets/img/header.jpg');">
+
+        </div>
+
+        <div class="container">
+            <h4 style="text-align: center;padding-top: 30px;margin-top: 0px;">PEDESTRIAN DETECTION USING DATASET</h4>
+            <a href="http://localhost:4200/home" class="btn btn-info">
+                Home
+            </a>
+            <div style=" margin-top: 30px;">
+                <div class="row" style="font-size: x-large;margin-left: 13rem;">
+                    <span style="padding-right: 1rem;">Result of Comparison Between</span><b>SSD, Faster R-CNN, YOLO</b>
+                </div>
+                <div>
+                    <table style="color: white; margin-top: 3rem;" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Parameter</th>
+                                <th scope="col">SSD</th>
+                                <th scope="col">Faster R-CNN</th>
+                                <th scope="col">YOLO</th>
+                                <th scope="col">Best</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Accuracy (mAP)</th>
+                                <td>76.9%</td>
+                                <td>73.2%</td>
+                                <td>63.4%</td>
+                                <td>SSD</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Speed (FPS)</th>
+                                <td>59</td>
+                                <td>7</td>
+                                <td>45</td>
+                                <td>SSD</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-md-6" style="border-right: 2px solid #f8f9fa;">
+                            <div id="accuracy" style="height: 200px; width: 100%;"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div id="speed" style="height: 200px; width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <ng-template #modal_mini let-c="close" let-d="dismiss">
+            <div class="modal-header justify-content-center">
+                <div class="modal-profile">
+                    <i class="now-ui-icons emoticons_satisfied"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>Resulted Video Will be Played on Python Terminal</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link btn-neutral">Back</button>
+                <button type="button" class="btn btn-link btn-neutral" (click)="c('Close click')">Ok</button>
+            </div>
+        </ng-template>
+    </div>
